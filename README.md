@@ -308,9 +308,7 @@ There is no Docker build or pull step, so it will start immediately.
     PUBLISH_BRANCH: gh-pages
     PUBLISH_DIR: ./public
     SCRIPT_MODE: true
-  run: |
-    wget https://raw.githubusercontent.com/peaceiris/actions-gh-pages/v2.5.0/entrypoint.sh
-    bash ./entrypoint.sh
+  run: bash -c $(curl -fsSL https://raw.githubusercontent.com/peaceiris/actions-gh-pages/v2.5.0/entrypoint.sh)
 ```
 
 <div align="right">
